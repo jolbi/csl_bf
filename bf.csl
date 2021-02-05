@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0.1" demote-non-dropping-particle="sort-only">
   <info>
-    <title>Biotehniska fakulteta 0.6 </title>
-    <title-short>BF 0.6</title-short>
-    <id>https://github.com/jolbi/csl_bf/blob/main/bf_sl_0_6.csl</id>
-    <link href="https://github.com/jolbi/csl_bf/raw/main/bf_sl_0_6.csl" rel="self"/>
+    <title>Biotehniska fakulteta</title>
+    <title-short>BF</title-short>
+    <id>https://github.com/jolbi/csl_bf/blob/main/bf.csl</id>
+    <link href="https://github.com/jolbi/csl_bf/raw/main/bf.csl" rel="self"/>
     <author>
       <name>Tim Godec</name>
-	  <email>timgodec@gmail.com</email>
+      <email>timgodec@gmail.com</email>
     </author>
     <category citation-format="author-date"/>
     <category field="biology"/>
-    <updated>2021-02-28T03:10:24+01:00</updated>
+    <updated>2021-02-28T18:45:24+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License</rights>
-	<summary>Stil citiranja je bil ustvarjen kot pomoč študentom Biotehniške fakultete Univerze v Ljubljani in je povzet po dokumentu NAVODILA ZA PRIPRAVO ZAKLJUČNIH PISNIH IZDELKOV NA BIOTEHNIŠKI FAKULTETI (https://www.bf.uni-lj.si/mma/Navodila_za_pripravo_zakljucnih_pisnih_izdelkov_na_BF.pdf/2020122209262298/?m=1608625582).</summary>
+    <summary>Stil citiranja je bil ustvarjen kot pomoč študentom Biotehniške fakultete UL in je povzet po dokumentu NAVODILA ZA PRIPRAVO ZAKLJUČNIH PISNIH IZDELKOV NA BIOTEHNIŠKI FAKULTETI (https://www.bf.uni-lj.si/mma/Navodila_za_pripravo_zakljucnih_pisnih_izdelkov_na_BF.pdf/2020122209262298/?m=1608625582).</summary>
   </info>
   <locale xml:lang="en">
     <terms>
