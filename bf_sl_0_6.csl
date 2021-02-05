@@ -13,6 +13,7 @@
     <category field="biology"/>
     <updated>2021-02-28T03:10:24+01:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License</rights>
+	<summary>Stil citiranja je bil ustvarjen kot pomoč študentom Biotehniške fakultete Univerze v Ljubljani in je povzet po dokumentu NAVODILA ZA PRIPRAVO ZAKLJUČNIH PISNIH IZDELKOV NA BIOTEHNIŠKI FAKULTETI (https://www.bf.uni-lj.si/mma/Navodila_za_pripravo_zakljucnih_pisnih_izdelkov_na_BF.pdf/2020122209262298/?m=1608625582).</summary>
   </info>
   <locale xml:lang="en">
     <terms>
@@ -143,27 +144,27 @@
 		   </group>
 		   <group delimiter=", ">
 			 <text variable="publisher-place"/>
-		   <group delimiter=" ">
+			 <group delimiter=" ">
 			 <text suffix=": " variable="publisher"/>
 			 <text macro="pages"/>
+			 </group>
 		   </group>
-	    </group>
           </else-if>
           <else-if type="chapter">
             <group delimiter=". ">
               <text macro="title"/>
               <group delimiter=": ">
                 <text term="in" text-case="capitalize-first"/>
-   		<text variable="container-title"/>
-		</group>
-   		<text variable="edition"/>
+				<text variable="container-title"/>
+			  </group>
+				<text variable="edition"/>
                 <text macro="editor"/>
               <group delimiter=", ">
                 <text variable="publisher-place"/>
-              <group delimiter=": ">
-                <text variable="publisher"/>
-                <text variable="page"/>
-              </group>
+				<group delimiter=": ">
+				  <text variable="publisher"/>
+                  <text variable="page"/>
+				</group>
               </group>
             </group>
           </else-if>
@@ -178,10 +179,10 @@
               <text variable="container-title"/>
             <group delimiter=", ">
               <text value="[kraj]"/>
-            <group delimiter=": ">
-              <text value="[ustanova]"/>
-              <text value="[št.] str."/>
-            </group>
+			  <group delimiter=": ">
+				<text value="[ustanova]"/>
+				<text value="[št.] str."/>
+			  </group>
             </group>
             <text macro="access"/>
             </group>
