@@ -3,8 +3,8 @@
   <info>
     <title>Biotehniska fakulteta</title>
     <title-short>BF 0.6</title-short>
-    <id>https://github.com/jolbi/csl_bf/blob/main/bf_sl_0_6.csl</id>
-    <link href="https://github.com/jolbi/csl_bf/raw/main/bf_sl_0_6.csl" rel="self"/>
+    <id>https://github.com/jolbi/csl_bf/blob/main/bf.csl</id>
+    <link href="https://github.com/jolbi/csl_bf/raw/main/bf.csl" rel="self"/>
     <author>
       <name>Tim Godec</name>
 	  <email>timgodec@gmail.com</email>
