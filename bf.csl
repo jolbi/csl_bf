@@ -2,7 +2,7 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
   <info>
     <title>Biotehniska fakulteta</title>
-    <title-short>BF_sl</title-short>
+    <title-short>BF</title-short>
     <id>https://github.com/jolbi/csl_bf/blob/main/bf.csl</id>
     <link href="https://github.com/jolbi/csl_bf/raw/main/bf.csl" rel="self"/>
     <author>
