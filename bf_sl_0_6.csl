@@ -3,16 +3,16 @@
   <info>
     <title>Biotehniska fakulteta 0.6 </title>
     <title-short>BF 0.6</title-short>
-    <id>https://github.com/jolbi/csl_bf</id>
-    <link href="http://www.zotero.org/styles/bf" rel="self"/>
+    <id>https://github.com/jolbi/csl_bf/blob/main/bf_sl_0_6.csl</id>
+    <link href="https://github.com/jolbi/csl_bf/raw/main/bf_sl_0_6.csl" rel="self"/>
     <author>
       <name>Tim Godec</name>
 	  <email>timgodec@gmail.com</email>
     </author>
     <category citation-format="author-date"/>
     <category field="biology"/>
-    <updated>2021-02-05T17:10:00+01:00</updated>
-    <rights license="https://creativecommons.org/licenses/by-sa/4.0/>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License</rights>
+    <updated>2021-02-28T03:10:24+01:00</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/4.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License</rights>
   </info>
   <locale xml:lang="en">
     <terms>
