@@ -137,34 +137,34 @@
             <text variable="publisher-place"/>
           </if>
           <else-if type="book">
-           <group delimiter=". ">
-			 <text macro="title"/>
-			 <text macro="series"/>
-			 <text variable="edition"/>
-		   </group>
-		   <group delimiter=", ">
-			 <text variable="publisher-place"/>
-			 <group delimiter=" ">
-			 <text suffix=": " variable="publisher"/>
-			 <text macro="pages"/>
-			 </group>
-		   </group>
+            <group delimiter=". ">
+	      <text macro="title"/>
+	      <text macro="series"/>
+	      <text variable="edition"/>
+	     </group>
+	     <group delimiter=", ">
+	       <text variable="publisher-place"/>
+	       <group delimiter=" ">
+	         <text suffix=": " variable="publisher"/>
+	        <text macro="pages"/>
+	      </group>
+	    </group>
           </else-if>
           <else-if type="chapter">
             <group delimiter=". ">
               <text macro="title"/>
               <group delimiter=": ">
                 <text term="in" text-case="capitalize-first"/>
-				<text variable="container-title"/>
-			  </group>
-				<text variable="edition"/>
-                <text macro="editor"/>
-              <group delimiter=", ">
-                <text variable="publisher-place"/>
-				<group delimiter=": ">
-				  <text variable="publisher"/>
+        	<text variable="container-title"/>
+	      </group>
+              <text variable="edition"/>
+              <text macro="editor"/>
+	      <group delimiter=", ">
+		<text variable="publisher-place"/>
+		<group delimiter=": ">
+		  <text variable="publisher"/>
                   <text variable="page"/>
-				</group>
+		</group>
               </group>
             </group>
           </else-if>
@@ -177,14 +177,14 @@
           <else-if type="webpage post post-weblog" match="any">
             <group  delimiter=". ">
               <text variable="container-title"/>
-            <group delimiter=", ">
-              <text value="[kraj]"/>
-			  <group delimiter=": ">
-				<text value="[ustanova]"/>
-				<text value="[št.] str."/>
-			  </group>
-            </group>
-            <text macro="access"/>
+              <group delimiter=", ">
+                <text value="[kraj]"/>
+		<group delimiter=": ">
+		  <text value="[ustanova]"/>
+	 	  <text value="[št.] str."/>
+		</group>
+              </group>
+              <text macro="access"/>
             </group>
           </else-if>
           <else>
@@ -192,14 +192,14 @@
               <text macro="title" suffix="."/>
               <group delimiter=", ">
                 <text variable="container-title" form="long"/>
-				<text variable="volume"/>
+		<text variable="volume"/>
                 <group delimiter=": ">
                   <text variable="issue"/>
                   <text variable="page"/>
                 </group>
-				<text suffix=":" macro="access"/>
+		<text suffix=":" macro="access"/>
               </group>
-			  <text macro="pages"/>
+	      <text macro="pages"/>
             </group>
           </else>
         </choose>
