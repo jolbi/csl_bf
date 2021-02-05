@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
+  <info>
+    <title>Biotehniska fakulteta 0.6 </title>
+    <title-short>BF 0.6</title-short>
+    <id>https://github.com/jolbi/csl_bf</id>
+    <link href="http://www.zotero.org/styles/bf" rel="self"/>
+    <author>
+      <name>Tim Godec</name>
+	  <email>timgodec@gmail.com</email>
+    </author>
+    <category citation-format="author-date"/>
+    <category field="biology"/>
+    <updated>2021-02-05T17:10:00+01:00</updated>
+    <rights license="https://creativecommons.org/licenses/by-sa/4.0/>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 License</rights>
+  </info>
+  <locale xml:lang="en">
+    <terms>
+      <term name="et-al">in sod.</term>
+	  <term name="and">in</term>
+	  <term form="short" name="editor">ur.</term>
+	  <term name="in">V</term>
+	  <term form="short" name="page">str.</term>
+	  <term name="month-01">jan.</term>
+	  <term name="month-02">feb.</term>
+	  <term name="month-03">mar.</term>
+	  <term name="month-04">apr.</term>
+	  <term name="month-05">maj</term>
+	  <term name="month-06">jun.</term>
+	  <term name="month-07">jul.</term>
+	  <term name="month-08">avg.</term>
+	  <term name="month-09">sep.</term>
+	  <term name="month-10">okt.</term>
+	  <term name="month-11">nov.</term>
+	  <term name="month-12">dec.</term>
+	</terms>
+    <date form="text">
+  	  <date-part name="day" suffix=". "/>
+  	  <date-part name="month" suffix=" "/>
+	  <date-part name="year"/>
+    </date>
+  </locale>
+  <macro name="author">
+    <names variable="author">
+      <name delimiter-precedes-last="never" initialize-with=". " name-as-sort-order="all" sort-separator=" "/>
+      <label form="short" strip-periods="true" prefix="(" suffix=")"/>
+      <substitute>
+        <text macro="editor"/>
+        <text macro="title"/>
+      </substitute>
+    </names>
+  </macro>
+  <macro name="editor">
+    <names variable="editor">
+      <name initialize-with=". " name-as-sort-order="all" sort-separator=" "/>
+      <label form="short" strip-periods="false" prefix=" (" suffix=")"/>
+    </names>
+  </macro>
+  <macro name="year">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+  <macro name="title">
+    <choose>
+      <if match="any" variable="original-title">
+        <text variable="original-title" prefix="[" suffix="]"/>
+      </if>
+      <else>
+        <text variable="title"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="volume">
+    <group delimiter=" ">
+      <label text-case="capitalize-first" variable="volume" form="short"/>
+      <number variable="volume"/>
+    </group>
+  </macro>
+  <macro name="pages">
+    <group delimiter=" ">
+      <text variable="number-of-pages"/>
+      <label variable="page" form="short"/>
+    </group>
+  </macro>
+  <macro name="access">
+    <group>
+      <choose>
+        <if type="webpage post-weblog post" match="any">
+          <group delimiter=" ">
+            <text variable="URL"/>
+            <date prefix="(" suffix=")" variable="accessed" form="text"/>
+          </group>
+        </if>
+        <else-if type="article-journal" match="any">
+          <text variable="DOI" prefix="doi: "/>
+        </else-if>
+      </choose>
+    </group>
+  </macro>
+  <macro name="series">
+    <group prefix="(" suffix=")" delimiter=", ">
+      <text variable="collection-title"/>
+      <text variable="collection-number"/>
+    </group>
+  </macro>
+  <citation disambiguate-add-year-suffix="true" collapse="year" et-al-min="3" et-al-use-first="1">
+    <sort>
+      <key macro="year"/>
+      <key variable="author"/>
+    </sort>
+    <layout delimiter="; " prefix="(" suffix=")">
+      <group delimiter=" ">
+        <names variable="author" suffix=", ">
+          <name and="text" delimiter=" " name-as-sort-order="all" sort-separator=", " form="short"/>
+        </names>
+        <date variable="issued">
+          <date-part name="year" form="long"/>
+        </date>
+      </group>
+    </layout>
+  </citation>
+  <bibliography hanging-indent="true">
+    <sort>
+      <key macro="author"/>
+      <key macro="year" sort="ascending"/>
+    </sort>
+    <layout suffix=" ">
+      <group delimiter=". ">
+        <text macro="author"/>
+        <text macro="year"/>
+        <choose>
+          <if type="thesis">
+            <text macro="title" font-style="italic"/>
+            <text variable="publisher" suffix=", "/>
+            <text variable="publisher-place"/>
+          </if>
+          <else-if type="book">
+           <group delimiter=". ">
+			 <text macro="title"/>
+			 <text macro="series"/>
+			 <text variable="edition"/>
+		   </group>
+		   <group delimiter=", ">
+			 <text variable="publisher-place"/>
+		   <group delimiter=" ">
+			 <text suffix=": " variable="publisher"/>
+			 <text macro="pages"/>
+		   </group>
+	    </group>
+          </else-if>
+          <else-if type="chapter">
+            <group delimiter=". ">
+              <text macro="title"/>
+              <group delimiter=": ">
+                <text term="in" text-case="capitalize-first"/>
+   		<text variable="container-title"/>
+		</group>
+   		<text variable="edition"/>
+                <text macro="editor"/>
+              <group delimiter=", ">
+                <text variable="publisher-place"/>
+              <group delimiter=": ">
+                <text variable="publisher"/>
+                <text variable="page"/>
+              </group>
+              </group>
+            </group>
+          </else-if>
+          <else-if type="paper-conference">
+            <text macro="title"/>
+            <text variable="event" prefix=" " suffix=", " font-style="italic"/>
+            <text variable="volume" suffix=", "/>
+            <text variable="page" suffix="."/>
+          </else-if>
+          <else-if type="webpage post post-weblog" match="any">
+            <group  delimiter=". ">
+              <text variable="container-title"/>
+            <group delimiter=", ">
+              <text value="[kraj]"/>
+            <group delimiter=": ">
+              <text value="[ustanova]"/>
+              <text value="[št.] str."/>
+            </group>
+            </group>
+            <text macro="access"/>
+            </group>
+          </else-if>
+          <else>
+            <group delimiter=" ">
+              <text macro="title" suffix="."/>
+              <group delimiter=", ">
+                <text variable="container-title" form="long"/>
+				<text variable="volume"/>
+                <group delimiter=": ">
+                  <text variable="issue"/>
+                  <text variable="page"/>
+                </group>
+				<text suffix=":" macro="access"/>
+              </group>
+			  <text macro="pages"/>
+            </group>
+          </else>
+        </choose>
+      </group>
+    </layout>
+  </bibliography>
+</style>
